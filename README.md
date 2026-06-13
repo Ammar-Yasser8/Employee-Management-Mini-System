@@ -10,7 +10,7 @@ The system allows users to manage employees and departments, perform CRUD operat
 
 ## Project Architecture
 
-The solution is organized into four separate projects following a clean architecture approach to improve maintainability, scalability, and separation of concerns.
+The solution is organized into four separate projects following a Clean Architecture Principles to improve maintainability, scalability, and separation of concerns.
 
 ### 1. EmployeeManagement.API
 
