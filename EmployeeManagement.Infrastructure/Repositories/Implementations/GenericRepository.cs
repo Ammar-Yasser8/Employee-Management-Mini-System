@@ -48,5 +48,5 @@ namespace EmployeeManagement.Infrastructure.Repositories.Implementations
             await _context.SaveChangesAsync();
         }
     }
-    }
+}
 
