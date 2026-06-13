@@ -24,6 +24,11 @@ namespace EmployeeManagement.Application.Services.Implementations
             var department = await _departmentRepository.GetByIdAsync(dto.DepartmentId);
             if (department == null)
                 throw new KeyNotFoundException("Department not found");
+            var emps = await _employeeRepository.GetAllAsync();
+            if (emps.Any(e => e.Email == dto.Email))
+                throw new InvalidOperationException("Email already exists");
+            if (emps.Any(e => e.MobileNumber == dto.MobileNumber))
+                throw new InvalidOperationException("Mobile number already exists");
             var employee = new Employee
             {
                 FullName = dto.FullName,
@@ -54,8 +59,7 @@ namespace EmployeeManagement.Application.Services.Implementations
 
         public async Task<EmployeeResponseDto?> GetByIdAsync(int id)
         {
-            var employee =
-                await _employeeRepository.GetByIdWithDepartmentAsync(id);
+            var employee =await _employeeRepository.GetByIdWithDepartmentAsync(id);
 
             if (employee == null)
                 return null;

@@ -22,6 +22,7 @@ namespace EmployeeP_Management.API.Middelwares
                 context.Response.StatusCode = ex switch
                 {
                     KeyNotFoundException => (int)HttpStatusCode.NotFound,
+                    InvalidOperationException => (int)HttpStatusCode.BadRequest,
                     _ => (int)HttpStatusCode.InternalServerError
                 };
 

@@ -21,11 +21,16 @@ namespace EmployeeManagement.Application.Services.Implementations
 
         public async Task CreateAsync(CreateDepartmentDto dto)
         {
-            var department = new Department
+            var department = await _departmentRepository.GetAllAsync();
+            if(department.Any(d => d.Name.Equals(dto.Name, StringComparison.OrdinalIgnoreCase)))
+            {
+                throw new InvalidOperationException($"Department with name {dto.Name} already exists");
+            }
+            var newDepartment = new Department
             {
                 Name = dto.Name
             };
-            await _departmentRepository.AddAsync(department);
+            await _departmentRepository.AddAsync(newDepartment);
         }
 
         public async Task DeleteAsync(int id)

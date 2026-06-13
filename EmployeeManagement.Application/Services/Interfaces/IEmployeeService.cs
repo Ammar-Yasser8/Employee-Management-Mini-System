@@ -18,6 +18,7 @@ namespace EmployeeManagement.Application.Services.Interfaces
         Task DeleteAsync(int id);
 
         Task<IEnumerable<EmployeeResponseDto>>SearchAsync(string keyword);
+      
 
     }
 }
