@@ -26,7 +26,7 @@ namespace EmployeeManagement.Infrastructure.Data
             modelBuilder.Entity<Employee>().HasIndex(e => e.Email).IsUnique();
             modelBuilder.Entity<Employee>().HasIndex(e => e.MobileNumber).IsUnique();
             modelBuilder.Entity<Department>().HasIndex(d => d.Name).IsUnique();
-            
+            modelBuilder.Entity<Employee>().HasQueryFilter(e => e.IsActive);
         }
     }
 }
