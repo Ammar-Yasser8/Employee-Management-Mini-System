@@ -87,6 +87,17 @@ Each layer has a single responsibility and communicates through abstractions.
 
 The application uses a Global Exception Middleware to handle unhandled exceptions in a centralized manner.
 
+
+### Validation
+
+The application validates:
+
+- Unique Employee Email
+- Unique Employee Mobile Number
+- Unique Department Name
+- Existing Department before Employee Creation
+
+Validation errors are returned through the Global Exception Middleware and displayed in the frontend notifications.
 ### Benefits
 
 * Centralized exception handling
