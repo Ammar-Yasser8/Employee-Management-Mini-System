@@ -7,11 +7,11 @@ namespace EmployeeP_Management.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeeController : ControllerBase
+    public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
 
-        public EmployeeController(IEmployeeService employeeService)
+        public EmployeesController(IEmployeeService employeeService)
         {
             _employeeService = employeeService;
         }
