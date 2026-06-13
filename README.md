@@ -263,6 +263,30 @@ https://localhost:{port}/swagger
 and test the available API endpoints.
 
 ---
+## Frontend
+
+A simple responsive frontend was built using:
+
+* HTML5
+* CSS3
+* Bootstrap 5
+* JavaScript (Fetch API)
+
+Features:
+
+* Employee Management Interface
+* Department Management Interface
+* Employee Search
+* Add / Edit / Delete Employees
+* Add / Edit / Delete Departments
+* Dynamic Department Dropdown
+* Responsive Design
+
+Frontend URL:
+
+[https://localhost:{port}/index.html](https://localhost:{port}/index.html)
+
+The frontend consumes the ASP.NET Core Web API and all data is stored in SQL Server.
 
 ## Author
 
