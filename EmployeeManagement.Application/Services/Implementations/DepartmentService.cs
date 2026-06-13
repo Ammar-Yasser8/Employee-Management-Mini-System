@@ -59,7 +59,7 @@ namespace EmployeeManagement.Application.Services.Implementations
             var department = await _departmentRepository.GetByIdAsync(id);
             if(department is null)
             {
-                throw new Exception($"Department with id {id} not found.");
+                throw new KeyNotFoundException($"Department with id {id} not found");
             }
             department.Name = dto.Name;
             await _departmentRepository.UpdateAsync(department);

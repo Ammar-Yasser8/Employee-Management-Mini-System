@@ -3,6 +3,7 @@ using EmployeeManagement.Application.Services.Interfaces;
 using EmployeeManagement.Infrastructure.Data;
 using EmployeeManagement.Infrastructure.Repositories.Implementations;
 using EmployeeManagement.Infrastructure.Repositories.Interfaces;
+using EmployeeP_Management.API.Middelwares;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,7 +36,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseMiddleware<ExceptionMiddleware>();
 app.MapControllers();
 
 app.Run();

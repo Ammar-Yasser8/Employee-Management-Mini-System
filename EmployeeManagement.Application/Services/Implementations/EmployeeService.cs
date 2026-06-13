@@ -23,7 +23,7 @@ namespace EmployeeManagement.Application.Services.Implementations
         {
             var department = await _departmentRepository.GetByIdAsync(dto.DepartmentId);
             if (department == null)
-                throw new Exception("Department not found");
+                throw new KeyNotFoundException("Department not found");
             var employee = new Employee
             {
                 FullName = dto.FullName,
@@ -41,7 +41,7 @@ namespace EmployeeManagement.Application.Services.Implementations
         {
             var employee = await _employeeRepository.GetByIdAsync(id);
             if (employee == null)
-                throw new Exception("Employee not found");
+                throw new KeyNotFoundException("Employee not found");
             await _employeeRepository.DeleteAsync(employee);
         }
 
@@ -79,10 +79,10 @@ namespace EmployeeManagement.Application.Services.Implementations
         {
             var employee = await _employeeRepository.GetByIdWithDepartmentAsync(id);
             if (employee == null)
-                throw new Exception("Employee not found");
+                throw new KeyNotFoundException("Employee not found");
             var department = await _departmentRepository.GetByIdAsync(dto.DepartmentId);
             if (department == null)
-                throw new Exception("Department not found");
+                throw new KeyNotFoundException("Department not found");
             employee.FullName = dto.FullName;
             employee.Email = dto.Email;
             employee.MobileNumber = dto.MobileNumber;
