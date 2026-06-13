@@ -286,6 +286,16 @@ Frontend URL:
 
 [https://localhost:{port}/index.html](https://localhost:{port}/index.html)
 
+Images :
+<img width="1600" height="730" alt="image" src="https://github.com/user-attachments/assets/a80dcba0-5598-4392-92f3-6ce6c27ba1e7" />
+<img width="1600" height="729" alt="image" src="https://github.com/user-attachments/assets/272c7689-bb3b-4894-817f-7c21f712a543" />
+<img width="1600" height="720" alt="image" src="https://github.com/user-attachments/assets/7ad7c31e-943a-4e71-80f2-3b070c25c6ff" />
+<img width="1600" height="727" alt="image" src="https://github.com/user-attachments/assets/979daed8-f4c1-4b52-b316-97c466c4418a" />
+<img width="1600" height="741" alt="image" src="https://github.com/user-attachments/assets/995c6424-2dea-411b-934e-9f2172ad3a0d" />
+<img width="1600" height="730" alt="image" src="https://github.com/user-attachments/assets/8d1ecefe-98d4-442d-b7d1-0d9fcdac4e5f" />
+<img width="1600" height="727" alt="image" src="https://github.com/user-attachments/assets/1e04f6aa-7026-45fb-be76-782c3bc4c14b" />
+<img width="1600" height="727" alt="image" src="https://github.com/user-attachments/assets/90cb1bb7-bbfd-458d-a657-131763c253cc" />
+
 The frontend consumes the ASP.NET Core Web API and all data is stored in SQL Server.
 
 ## Author
