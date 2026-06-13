@@ -209,7 +209,7 @@ git clone https://github.com/Ammar-Yasser8/Employee-Management-Mini-System.git
 Open the solution using Visual Studio .
 
 ### 3. Configure Database Connection
-
+The repository includes Entity Framework Core migration files required to create the database schema.
 Update the connection string inside:
 
 ```json
