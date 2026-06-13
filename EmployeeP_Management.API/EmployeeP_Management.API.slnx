@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="../EmployeeManagement.Application/EmployeeManagement.Application.csproj" Id="d0240b37-bb70-45fa-80c8-7cbb5498b89c" />
   <Project Path="../EmployeeManagement.Domain/EmployeeManagement.Domain.csproj" />
   <Project Path="../EmployeeManagement.Infrastructure/EmployeeManagement.Infrastructure.csproj" />
   <Project Path="EmployeeP_Management.API.csproj" />
