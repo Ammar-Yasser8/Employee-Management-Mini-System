@@ -17,8 +17,7 @@ namespace EmployeeManagement.Application.Services.Interfaces
         Task UpdateAsync(int id, UpdateEmployeeDto dto);
         Task DeleteAsync(int id);
 
-        Task<IEnumerable<EmployeeResponseDto>>
-            SearchAsync(string keyword);
+        Task<IEnumerable<EmployeeResponseDto>>SearchAsync(string keyword);
 
     }
 }
