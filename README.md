@@ -83,6 +83,33 @@ Used throughout the application to achieve loose coupling between components.
 Each layer has a single responsibility and communicates through abstractions.
 
 ---
+## Error Handling
+
+The application uses a Global Exception Middleware to handle unhandled exceptions in a centralized manner.
+
+### Benefits
+
+* Centralized exception handling
+* Consistent API error responses
+* Cleaner controllers and services
+* Improved maintainability
+
+### Exception Handling Strategy
+
+The application uses built-in exceptions such as:
+
+* KeyNotFoundException → Returns HTTP 404 Not Found
+
+Example response:
+
+```json
+{
+  "statusCode": 404,
+  "message": "Employee not found"
+}
+```
+
+The Global Exception Middleware converts exceptions into meaningful HTTP responses and JSON error messages.
 
 ## Technologies Used
 
