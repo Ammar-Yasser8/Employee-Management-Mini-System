@@ -1,0 +1,311 @@
+/* style.css - Premium Dark UI for Employee Management */
+/* Google Font Inter is imported in HTML */
+
+:root {
+  --primary: hsl(217, 91%, 60%);
+  --primary-dark: hsl(217, 91%, 50%);
+  --primary-glow: hsla(217, 91%, 60%, 0.25);
+  --accent: hsl(160, 84%, 44%);
+  --accent-dark: hsl(160, 84%, 36%);
+  --danger: hsl(0, 84%, 60%);
+  --danger-dark: hsl(0, 84%, 50%);
+  --bg-start: hsl(222, 47%, 11%);
+  --bg-end: hsl(217, 33%, 7%);
+  --surface: hsl(220, 30%, 16%);
+  --surface-hover: hsl(220, 30%, 20%);
+  --text: hsl(210, 40%, 96%);
+  --text-muted: hsl(215, 20%, 65%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Base ────────────────────────────────────────────── */
+
+body {
+  background: linear-gradient(145deg, var(--bg-start), var(--bg-end));
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Title ───────────────────────────────────────────── */
+
+.title-gradient {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* ── Nav Pills ───────────────────────────────────────── */
+
+.nav-pills .nav-link {
+  color: var(--text-muted);
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.nav-pills .nav-link:hover {
+  color: var(--text);
+  background: var(--glass-bg);
+}
+
+.nav-pills .nav-link.active {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+/* ── Glass Card (tables & modals) ────────────────────── */
+
+.glass-table,
+.glass-modal {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* ── Table ───────────────────────────────────────────── */
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text);
+  --bs-table-hover-bg: var(--surface-hover);
+  --bs-table-hover-color: var(--text);
+  --bs-table-striped-bg: transparent;
+  --bs-table-border-color: var(--glass-border);
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background: var(--surface);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--glass-border);
+  border-top: none;
+}
+
+.table tbody td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  vertical-align: middle;
+  font-size: 0.925rem;
+}
+
+.table tbody tr {
+  transition: background var(--transition);
+}
+
+.table tbody tr:hover {
+  background: var(--surface-hover);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Search Input ────────────────────────────────────── */
+
+.form-control,
+.form-select {
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.35rem;
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+
+.btn {
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: all var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 8px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px var(--primary-glow);
+}
+
+.btn-success {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: var(--danger-dark);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--glass-border);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+}
+
+/* ── Modals ──────────────────────────────────────────── */
+
+.modal-content.glass-modal {
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-backdrop.show {
+  opacity: 0.6;
+}
+
+.btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #searchInput {
+    width: 100% !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ── Toast Notifications ─────────────────────────────── */
+
+.toast {
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.toast-body {
+  font-weight: 500;
+}
+
+/* ── Status Icons ────────────────────────────────────── */
+
+.status-active {
+  color: hsl(160, 84%, 50%);
+  filter: drop-shadow(0 0 6px hsla(160, 84%, 50%, 0.5));
+}
+
+.status-inactive {
+  color: hsl(0, 75%, 60%);
+  filter: drop-shadow(0 0 6px hsla(0, 75%, 60%, 0.35));
+}
+
+/* ── Action Buttons in Table ─────────────────────────── */
+
+.table .btn-sm i {
+  font-size: 0.8rem;
+}
+
+/* ── Form Switch (dark mode fix) ─────────────────────── */
+
+.form-check-input {
+  background-color: var(--surface);
+  border-color: var(--glass-border);
+}
+
+.form-check-input:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.form-check-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
